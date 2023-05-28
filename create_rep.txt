@@ -5,3 +5,16 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:ub-nu/stepan.git
 git push -u origin main
+
+Erdogan's lead shrinks with more than 90% of votes tallied in unofficial count
+
+Recep Tayyip Erdogan maintains a slight lead in his race for a historic third term as Turkey's president. His lead against opponent Kemal Kilicdaroglu has, however, dwindled as preliminary results continue to come in from state-run news agency Anadolu.
+
+Here are the latest numbers from Anadolu:
+
+    Votes counted: 91.55%
+    Erdogan: 52.61%
+    Kilicdaroglu: 47.39%
+    Participation rate: 85.41%
+
+Figures published by Anadolu are unofficial. The official result of the election will be published by Turkey's Supreme Election Council. 
