@@ -5,3 +5,13 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:ub-nu/stepan.git
 git push -u origin main
+
+
+    - name: Parse HTML content
+      command: >
+        python -c 'from bs4 import BeautifulSoup; import html; soup = BeautifulSoup(html.unescape("""{{ response.content | xml_escape }}"""), "html.parser"); items = soup.find_all("tr", class_="tableItem"); result = [{item.find("td", class_="colSoftwareVersion").text.strip(): item.find("td", class_="colEndOfLife").text.strip()} for item in items]; import json; print(json.dumps(result))'
+      register: parsed_content
+
+    - name: Set fact with parsed result
+      set_fact:
+        result: "{{ parsed_content.stdout | from_json }}"
